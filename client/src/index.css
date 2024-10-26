@@ -9,9 +9,5 @@
 }
 
 body {
-    background: rgb(255, 252, 246);
-    background-image: url('./assets/bg.png');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
+    background: rgb(249, 248, 245);
 }

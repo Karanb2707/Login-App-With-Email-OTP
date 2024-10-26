@@ -10,8 +10,8 @@ export default function Username() {
         <div className={styles.glass}>
 
           <div className="title flex flex-col items-center">
-            <h4 className="text-5xl font-bold">Hello Again!</h4>
-            <span className="py-4 text-small text-center text-white">
+            <h4 className="text-5xl text-black font-bold">Hello Again!</h4>
+            <span className="py-4 text-small text-center text-gray-500">
               Explore More with Us
             </span>
           </div>
@@ -27,8 +27,8 @@ export default function Username() {
             </div>
             
             <div className="text-center py-4">
-              <span className="text-white">
-                Not a Member? <Link className="text-red-950" to="/register">Register Now</Link>
+              <span className="text-black">
+                Not a Member ? <Link className="text-red-950" to="/register">Register Now</Link>
               </span>
             </div>
           </form>

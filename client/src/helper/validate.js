@@ -14,6 +14,18 @@ export async function passwordValidate(values) {
     return errors;
 }
 
+//validate reset password page
+export async function resetPasswordValidation(values) {
+    const errors = passwordVerify({}, values);
+    
+    if(values.password !== values.confirm_pwd)
+    {
+        errors.exit = toast.error("Password not match...!");
+    }
+
+    return errors;
+}
+
 // validate username
 function usernameVerify(error = {}, values){
     if(!values.username)
@@ -51,3 +63,5 @@ function passwordVerify(errors = {}, values){
     
     return errors;
 }
+
+//validate reset password

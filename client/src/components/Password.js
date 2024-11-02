@@ -47,7 +47,7 @@ export default function Password() {
             
             <div className="text-center py-4">
               <span className="text-black">
-                Forgot Password ? <Link className="text-red-950" to="/register">Recover Now</Link>
+                Forgot Password ? <Link className="text-red-950" to="/recovery">Recover Now</Link>
               </span>
             </div>
           </form>

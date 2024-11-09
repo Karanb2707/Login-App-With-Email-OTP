@@ -4,7 +4,7 @@ import avatar from '../assets/profile.png';
 import styles from '../styles/Username.module.css';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
-import { registerValidation } from '../helper/validate';
+import { profileValidation } from '../helper/validate';
 import convertToBase64 from '../helper/convert';
 
 export default function Profile() {
@@ -19,7 +19,7 @@ export default function Profile() {
       mobile: '',
       address: ''
     },
-    validate: registerValidation,
+    validate: profileValidation,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {
@@ -72,7 +72,7 @@ export default function Profile() {
           
           <div className="text-center py-4">
             <span className="text-black">
-              Already Registered? <Link className="text-red-950" to="/">Login Now</Link>
+              Come back later? <Link className="text-red-950" to="/">Logout</Link>
             </span>
           </div>
         </form>

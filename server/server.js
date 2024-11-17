@@ -2,7 +2,7 @@ import express from "express";
 import cors from 'cors';
 import morgan from "morgan";
 import connect from "./database/conn.js";
-import { errors } from "mongodb-memory-server";
+import router from "./router/route.js";
 
 const app = express();
 
@@ -17,10 +17,13 @@ app.get('/',(req,res) => {
     res.status(201).json("Home GET Request");
 })
 
+//api routes
+app.use('/api', router);
+
 connect().then(() => {
     try {
         app.listen(port,() => {
-            console.log(`Server connected to http:://localhost:${port}`);
+            console.log(`Server connected to http://localhost:${port}`);
         })
     } catch (error) {
         console.log('Cannot connnect to the server');
